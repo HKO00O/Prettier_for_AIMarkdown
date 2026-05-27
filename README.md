@@ -16,7 +16,10 @@ This tool is designed to instantly clean up and format those chaotic AI outputs.
 <img width="545" height="629" alt="3" src="https://github.com/user-attachments/assets/f036c47f-4185-41e9-8555-46f85650b9a0" />
 
 4. **Bind a Hotkey:** Assign a hotkey to trigger the script. We highly recommend `Cmd + Shift + V` (or `Ctrl + Shift + V` on Windows).
-    
+
+5. **parament of strict_rules**(NEW ADDED):You can choose to delete all the blank line in the code block or not.
+<img width="516" height="83" alt="image" src="https://github.com/user-attachments/assets/0e62a1c0-880c-4dc0-bbac-3b0524757c82" /> 
+
 > 💡 **Tip:** This specific shortcut is perfect because it preserves standard pasting behavior when you just want to drop in text normally, while giving you instant formatting power when you need it.
 
 Enjoy a much cleaner, seamless vibe coding workflow! If this tool saved you some time, **don't forget to drop a ⭐ on GitHub!**
