@@ -76,6 +76,8 @@ During final text merging, the script performs unified whitespace and spacing ma
 5. **Parameter of strict_rules** (NEW ADDED): You can choose to delete all the blank lines in the code block or not.
 
 <img width="516" height="83" alt="image" src="https://github.com/user-attachments/assets/0e62a1c0-880c-4dc0-bbac-3b0524757c82" /> 
+6. Fixed: Yuque's "Export as Markdown" feature adds extra spaces around `$` symbols in math formulas, causing display issues in Obsidian.
+<img width="572" height="91" alt="image" src="https://github.com/user-attachments/assets/0a63bad9-96d3-43e6-9ec6-d0a5f2a04d50" />
 
 > 💡 **Tip:** This specific shortcut is perfect because it preserves standard pasting behavior when you just want to drop in text normally, while giving you instant formatting power when you need it.
 
