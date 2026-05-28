@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Obsidian / Claude Code
+.obsidian/
+.claude/
+
+# Personal notes (not part of this repo)
+LESS_learning.md
+OS_Plan_2.0.md
+Player_demo.md
+Titan项目数据流.md
+after_process_text.md
+opengame prompt.md
+pre_process_text.md
+计算方法/

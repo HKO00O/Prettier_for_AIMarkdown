@@ -100,11 +100,15 @@ function formatAiMarkdown(rawMarkdown, strictDeleteEmptyLines = true) {
                 }
 
                 // 修复行内公式内侧空格: $  xx x $ → $xx x$
-                // 仅匹配成对的单 $，跳过 $$...$$ 块公式；仅当至少一侧紧贴空白时才触发，
-                // 避免把 "$5 and $" 这类非公式片段误改。
+                // 仅匹配成对的单 $，跳过 $$...$$ 块公式。
+                // 触发条件（保守，避免把"$ 5 和 $ 10"这类货币片段误配成公式）：
+                //   1) 两侧都紧贴空白
+                //   2) 去空白后首尾非数字
                 line = line.replace(/(?<!\$)\$([^\n$]+?)\$(?!\$)/g, (m, inner) => {
-                    if (!/^\s|\s$/.test(inner)) return m;
-                    return '$' + inner.replace(/^\s+|\s+$/g, '') + '$';
+                    if (!/^\s/.test(inner) || !/\s$/.test(inner)) return m;
+                    const trimmed = inner.replace(/^\s+|\s+$/g, '');
+                    if (/^\d|\d$/.test(trimmed)) return m;
+                    return '$' + trimmed + '$';
                 });
 
                 // 【安全保护】：如果行内包含 `（行内代码）或 $（公式），绝对不删除
